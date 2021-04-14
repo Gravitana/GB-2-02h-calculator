@@ -17,4 +17,5 @@
     <string name="btn_multiplication">*</string>
     <string name="btn_division">/</string>
     <string name="btn_result">=</string>
+    <string name="calc_background">brain</string>
 </resources>
