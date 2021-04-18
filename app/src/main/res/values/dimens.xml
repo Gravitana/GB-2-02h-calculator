@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_digit">24sp</dimen>
+    <dimen name="result_padding_v">5dp</dimen>
+    <dimen name="result_padding_h">10dp</dimen>
+</resources>
