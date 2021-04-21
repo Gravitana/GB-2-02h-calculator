@@ -27,19 +27,19 @@ public class CalculatorPresenter {
         textResult = "";
         savedOperation = null;
 
-        view.showResult(String.valueOf(textResult));
+        view.showResult(textResult);
     }
 
     public void onButtonDigitClicked(int digit) {
         argTwo += digit;
 
-        view.showResult(String.valueOf(argTwo));
+        view.showResult(argTwo);
     }
 
     public void onButtonDotClicked() {
         argTwo += ".";
 
-        view.showResult(String.valueOf(argTwo));
+        view.showResult(argTwo);
     }
 
     public void onButtonOperationClicked(Operation operation) {
