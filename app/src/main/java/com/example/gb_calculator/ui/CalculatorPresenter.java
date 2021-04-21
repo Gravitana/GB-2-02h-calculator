@@ -43,7 +43,7 @@ public class CalculatorPresenter {
     }
 
     public void onButtonOperationClicked(Operation operation) {
-        if (savedOperation != Operation.NULL) {
+        if (!argOne.equals("") && savedOperation != Operation.NULL) {
             double arg1 = Double.parseDouble(argOne);
             double arg2 = Double.parseDouble(argTwo);
             double result = calculator.binaryOperation(arg1, arg2, savedOperation);
