@@ -30,90 +30,73 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_clear"
-            android:text="@string/btn_clear"
-            style="@style/CalcBtnStyle" />
+            android:text="@string/btn_clear" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_division"
-            android:text="@string/btn_division"
-            style="@style/CalcBtnStyle" />
+            android:text="@string/btn_division" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_1"
-            android:text="@string/btn_1"
-            style="@style/CalcBtnStyle" />
+            android:text="@string/btn_1" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_2"
-            android:text="@string/btn_2"
-            style="@style/CalcBtnStyle" />
+            android:text="@string/btn_2" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_3"
-            android:text="@string/btn_3"
-            style="@style/CalcBtnStyle" />
+            android:text="@string/btn_3" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_multiplication"
-            android:text="@string/btn_multiplication"
-            style="@style/CalcBtnStyle" />
+            android:text="@string/btn_multiplication" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_4"
-            android:text="@string/btn_4"
-            style="@style/CalcBtnStyle" />
+            android:text="@string/btn_4" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_5"
-            android:text="@string/btn_5"
-            style="@style/CalcBtnStyle" />
+            android:text="@string/btn_5" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_6"
-            android:text="@string/btn_6"
-            style="@style/CalcBtnStyle" />
+            android:text="@string/btn_6" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_minus"
-            android:text="@string/btn_minus"
-            style="@style/CalcBtnStyle" />
+            android:text="@string/btn_minus" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_7"
-            android:text="@string/btn_7"
-            style="@style/CalcBtnStyle" />
+            android:text="@string/btn_7" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_8"
-            android:text="@string/btn_8"
-            style="@style/CalcBtnStyle" />
+            android:text="@string/btn_8" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_9"
-            android:text="@string/btn_9"
-            style="@style/CalcBtnStyle" />
+            android:text="@string/btn_9" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_plus"
-            android:text="@string/btn_plus"
-            style="@style/CalcBtnStyle" />
+            android:text="@string/btn_plus" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_0"
             android:layout_columnSpan="2"
             android:layout_gravity="fill_horizontal"
-            android:text="@string/btn_0"
-            style="@style/CalcBtnStyle" />
+            android:text="@string/btn_0" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_dot"
-            android:text="@string/btn_dot"
-            style="@style/CalcBtnStyle" />
+            android:text="@string/btn_dot" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_res"
-            android:text="@string/btn_result"
-            style="@style/CalcBtnStyle" />
+            android:text="@string/btn_result" />
 
     </GridLayout>
 </FrameLayout>
