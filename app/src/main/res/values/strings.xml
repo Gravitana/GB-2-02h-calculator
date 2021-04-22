@@ -19,4 +19,6 @@
     <string name="btn_result">=</string>
     <string name="calc_background">brain</string>
     <string name="btn_clear">C</string>
+    <string name="btn_theme_light">Светлая</string>
+    <string name="btn_theme_dark">Тёмная</string>
 </resources>
