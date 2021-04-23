@@ -1,5 +1,6 @@
 package com.example.gb_calculator.ui;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -13,18 +14,29 @@ import com.example.gb_calculator.domain.Operation;
 
 public class CalculatorActivity extends AppCompatActivity implements CalculatorView {
 
+    private static final String ARG_RESULT = "ARG_RESULT";
+
     private CalculatorPresenter presenter;
 
     private TextView resultText;
+
+    private CalculatorData data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        presenter = new CalculatorPresenter(this, new CalculatorImpl(), new CalculatorData());
-
         resultText = findViewById(R.id.text_result);
+
+        if (savedInstanceState == null) {
+            data = new CalculatorData();
+        } else {
+            data = savedInstanceState.getParcelable("ARG_RESULT");
+            showResult(data.getResult());
+        }
+
+        presenter = new CalculatorPresenter(this, new CalculatorImpl(), data);
 
         findViewById(R.id.btn_clear).setOnClickListener(v -> presenter.onButtonClearClicked());
 
@@ -51,5 +63,11 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
     @Override
     public void showResult(String result) {
         resultText.setText(result);
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        outState.putParcelable(ARG_RESULT, data);
+        super.onSaveInstanceState(outState);
     }
 }
