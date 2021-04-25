@@ -7,9 +7,9 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:contentDescription="@string/calc_background"
+        android:src="@color/cardview_dark_background"
         android:scaleType="centerCrop"
-        android:src="@drawable/brain" />
+        android:contentDescription="@string/calc_background" />
 
     <GridLayout
         android:layout_width="wrap_content"
@@ -19,6 +19,7 @@
         android:useDefaultMargins="true"
         tools:ignore="UselessParent">
 
+
         <TextView
             android:id="@+id/text_result"
             android:layout_columnSpan="2"
@@ -26,7 +27,7 @@
             android:background="@color/teal_200"
             android:gravity="end"
             android:text="@string/default_result_text"
-            style="@style/CalcResStyle" />
+            style="@style/CalcResStyleDark" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_clear"
@@ -35,6 +36,10 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_division"
             android:text="@string/btn_division" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_multiplication"
+            android:text="@string/btn_multiplication" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_1"
@@ -49,8 +54,12 @@
             android:text="@string/btn_3" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_multiplication"
-            android:text="@string/btn_multiplication" />
+            android:id="@+id/btn_minus"
+            android:text="@string/btn_minus" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_plus"
+            android:text="@string/btn_plus" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_4"
@@ -65,8 +74,14 @@
             android:text="@string/btn_6" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_minus"
-            android:text="@string/btn_minus" />
+            android:id="@+id/btn_dot"
+            android:text="@string/btn_dot" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_res"
+            android:layout_rowSpan="2"
+            android:layout_gravity="fill_vertical"
+            android:text="@string/btn_result" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_7"
@@ -81,22 +96,8 @@
             android:text="@string/btn_9" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_plus"
-            android:text="@string/btn_plus" />
-
-        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_0"
-            android:layout_columnSpan="2"
-            android:layout_gravity="fill_horizontal"
             android:text="@string/btn_0" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_dot"
-            android:text="@string/btn_dot" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_res"
-            android:text="@string/btn_result" />
 
     </GridLayout>
 </FrameLayout>
