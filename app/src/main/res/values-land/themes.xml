@@ -13,7 +13,7 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
 
-        <item name="materialButtonStyle">@style/CalcBtnStyle</item>
+        <item name="materialButtonStyle">@style/CalcBtnStyleDark</item>
 
     </style>
 </resources>
