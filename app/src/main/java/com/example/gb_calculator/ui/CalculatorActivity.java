@@ -6,15 +6,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.gb_calculator.R;
 import com.example.gb_calculator.domain.CalculatorData;
 import com.example.gb_calculator.domain.CalculatorImpl;
+import com.example.gb_calculator.domain.Constants;
 import com.example.gb_calculator.domain.Operation;
 
-public class CalculatorActivity extends AppCompatActivity implements CalculatorView {
-
-    private static final String ARG_RESULT = "ARG_RESULT";
+public class CalculatorActivity extends AppCompatActivity implements CalculatorView, Constants {
 
     private CalculatorPresenter presenter;
 
@@ -28,6 +28,17 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        String selectedTheme = getIntent().getExtras().getString(SELECTED_THEME);
+
+        if (selectedTheme.equals("Light")) {
+            setTheme(R.style.Theme_GBcalculatorLight);
+        } else if (selectedTheme.equals("Dark")) {
+            setTheme(R.style.Theme_GBcalculatorDark);
+        } else {
+            setTheme(R.style.Theme_GBcalculator);
+        }
+
         setContentView(R.layout.activity_main);
 
         resultText = findViewById(R.id.text_result);
@@ -35,7 +46,7 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
         if (savedInstanceState == null) {
             data = new CalculatorData();
         } else {
-            data = savedInstanceState.getParcelable("ARG_RESULT");
+            data = savedInstanceState.getParcelable("CALC_DATA");
             showResult(data.getResult());
         }
 
@@ -64,7 +75,7 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
-        outState.putParcelable(ARG_RESULT, data);
+        outState.putParcelable(CALC_DATA, data);
         super.onSaveInstanceState(outState);
     }
 }
