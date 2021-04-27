@@ -12,8 +12,6 @@ public class CalculatorPresenter {
 
     private CalculatorData data;
 
-    private String textResult = "";
-
     public CalculatorPresenter(CalculatorView view, Calculator calculator, CalculatorData data) {
         this.view = view;
         this.calculator = calculator;
@@ -22,23 +20,21 @@ public class CalculatorPresenter {
 
     public void onButtonClearClicked() {
         data.reset();
-        textResult = "";
-        view.showResult(textResult);
+        view.showResult(data.getResult());
     }
 
     public void onButtonDigitClicked(String digit) {
-        textResult = data.inputDigit(digit);
-        view.showResult(textResult);
+        data.inputDigit(digit);
+        view.showResult(data.getResult());
     }
 
     public void onButtonOperationClicked(Operation operation) {
-        if (data.hasArgOne() && data.hasOperation()) {
+        if (data.hasOperation()) {
             double result = calculator.binaryOperation(data.getArgOne(), data.getArgTwo(), data.getOperation());
-            textResult = String.valueOf(result);
-            data.setDigits(textResult);
+            data.setDigits(String.valueOf(result));
         }
         data.inputOperation(operation);
-        view.showResult(textResult);
+        view.showResult(data.getResult());
     }
 
 }
