@@ -6,11 +6,11 @@ import com.example.gb_calculator.domain.Operation;
 
 public class CalculatorPresenter {
 
-    private CalculatorView view;
+    private final CalculatorView view;
 
-    private Calculator calculator;
+    private final Calculator calculator;
 
-    private CalculatorData data;
+    private final CalculatorData data;
 
     public CalculatorPresenter(CalculatorView view, Calculator calculator, CalculatorData data) {
         this.view = view;
